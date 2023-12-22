@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=shopName%> Shop</h1>
+    <h2>Here are the cars that we sell:</h2>
+    <ul>
+      <% availableCars.forEach(Cars =>  { %>
+        <li><%= Cars.name %>, <%= Cars.price %>, <%= Cars.bodytype %>, <%= Cars.fuel %></li>
+        <% }) %>
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+CREATE DATABASE myCars;
+USE myCars;
+CREATE TABLE Cars (id INT AUTO_INCREMENT,name VARCHAR(50),price INT unsigned,bodytype VARCHAR(50),fuel VARCHAR(50),description VARCHAR(50),PRIMARY KEY(id));
+INSERT INTO Cars (name, price, bodytype, fuel, description)VALUES('Ford Fiesta', 3440,'Hatchback','Petrol','New Drivers' ),('Vauxhall Corsa', 2880,'Hatchback','Petrol','New Drivers'), ('Volkswagen Polo', 4250,'Hatchback','Petrol','New Drivers') ;
+CREATE USER 'appuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'app2027';
+GRANT ALL PRIVILEGES ON myCars.* TO 'appuser'@'localhost';
+DROP USER 'appuser'@'localhost';
+DROP TABLE Cars;
+CREATE TABLE usercredentials (username VARCHAR(50), first_name VARCHAR(50) NOT NULL, last_name VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, hashedPassword VARCHAR(255) NOT NULL, PRIMARY KEY (username));
+SELECT *FROM usercredentials ;
